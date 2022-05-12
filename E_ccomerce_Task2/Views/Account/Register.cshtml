@@ -1,0 +1,125 @@
+﻿@model E_ccomerce_Task2.Models.RegisterViewModel
+@{
+    ViewData["Title"] = "Sign Up";
+   <link rel="stylesheet"  href="~/css/montserrat-font.css"  asp-append-version="true"/>
+	<link rel="stylesheet"  href="~/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css"  asp-append-version="true"/>
+	<!-- Main Style Css -->
+    <link rel="stylesheet" href="~/css/style.css" asp-append-version="true"/>
+
+}
+<h3 class="text-center text-white pt-5">Sign up </h3>
+
+<section class="form-v10">
+	<div class="page-content">
+	
+		<div class="form-v10-content">
+			<form class="form-detail" asp-action="Register" method="post" id="myform">
+				<div class="form-left">
+					<h2>General Infomation</h2>
+					<div asp-validation-summary="All" class="text-danger"></div>
+					<div class="form-group">
+						<div class="form-row form-row-1">
+							<div class="form-floating ">
+								<input asp-for="FirstName" type="text" class="form-control" id="firstName" placeholder="   " name="FirstName">
+								<label asp-for="FirstName">First Name</label>  
+								<span asp-validation-for="FirstName" class="text-danger"></span>  
+						    </div>
+						</div>
+						<div class="form-row form-row-2">
+						<div class="form-floating ">
+								<input asp-for="LastName" type="text" class="form-control" id="lastName" placeholder="   " name="LastName">
+								<label asp-for="LastName">Last Name</label>  
+								<span asp-validation-for="LastName" class="text-danger"></span>  
+						  </div>
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="form-floating ">
+								<input asp-for="Email" type="email" class="form-control" id="email" placeholder="   " name="Email">
+								<label asp-for="Email">Email</label>  
+								<span asp-validation-for="Email" class="text-danger"></span>  
+						  </div>
+					</div>
+					<div class="form-row">
+					<div class="form-floating ">
+								<input asp-for="Password" type="password" class="form-control" id="password" placeholder="   " name="Password">
+								<label asp-for="Password"> Password</label>  
+								<span asp-validation-for="Password" class="text-danger"></span>  
+						  </div>
+					</div>
+					<div class="form-row">
+					<div class="form-floating ">
+								<input asp-for="ConfirmPassword" type="password" class="form-control" id="confirmPassword" placeholder="   " name="ConfirmPassword">
+								<label asp-for="ConfirmPassword"> Confirm Password</label>  
+								<span asp-validation-for="ConfirmPassword" class="text-danger"></span>  
+						  </div>
+					</div>
+				</div>
+
+				<div class="form-right">
+					<h2>Details</h2>
+
+
+					<div class="form-row">
+						<div class="form-floating ">
+								<input asp-for="Address1" type="text" class="form-control" id="address1" placeholder="   " name="Address1">
+								<label asp-for="Address1">Address Line1</label>  
+								<span asp-validation-for="Address1" class="text-danger"></span>  
+						  </div>
+					</div>
+
+					<div class="form-row">
+						<div class="form-floating ">
+								<input asp-for="Address2" type="text" class="form-control" id="address2" placeholder="   " name="Address2">
+								<label asp-for="Address2">Address Line2</label>  
+								<span asp-validation-for="Address2" class="text-danger"></span>  
+						  </div>
+					</div>
+
+					
+					
+					<div class="form-group">
+						<div class="form-row form-row-1">
+							<div class="form-floating ">
+								<input asp-for="ZipCode" type="text" class="form-control" id="zipCode" placeholder="   " name="ZipCode">
+								<label asp-for="ZipCode">ZipCode</label>  
+								<span asp-validation-for="ZipCode" class="text-danger"></span>  
+						  </div>
+						</div>
+						<div class="form-row form-row-2">
+							<div class="form-floating ">
+								<input asp-for="City" type="text" class="form-control" id="city" placeholder="   " name="City">
+								<label asp-for="City">ZipCode</label>  
+								<span asp-validation-for="City" class="text-danger"></span>  
+						  </div>
+						</div>
+					</div>
+					<div class="form-row form-row-2">
+						<div class="form-floating ">
+							<select asp-for="Country" name="Country" class="form-control">
+								<option value="choose country">Country</option>
+								<option value="Palestine">Vietnam</option>
+								<option value="Vietnam">Vietnam</option>
+								<option value="Malaysia">Malaysia</option>
+								<option value="India">India</option>
+							</select>
+							<span class="select-btn">
+						  		<i class="zmdi zmdi-chevron-down"></i>
+							</span>
+							<label asp-for="Country">Country</label>  
+							<span asp-validation-for="Country" class="text-danger"></span>  
+					  </div>
+						
+					</div>
+
+					<div class="form-row-last">
+					<input type="submit" value="Sign up" class="register btn btn-primary" />
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</section>
+
+
+ 

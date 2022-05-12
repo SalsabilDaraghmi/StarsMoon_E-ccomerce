@@ -1,0 +1,160 @@
+﻿@model IEnumerable<Product>
+@{
+    ViewData["Title"] = "Home Page";
+
+     <!-- Site CSS -->
+     <link rel="stylesheet" href="~/css/Home/style.css">
+        <link rel="stylesheet" href="~/css/Home/owl.carousel.min.css">
+       <link rel="stylesheet" href="~/css/Home/owl.theme.default.min.css">
+    <link rel="stylesheet" href="~/css/Home/index.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="~/css/Home/responsive.css">
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+}
+<style>
+.img-fluid {
+    max-width: 70%;
+    height: 300px;
+}
+
+
+</style>
+
+
+    <!-- Start Slider -->
+    <section id="slides-shop" class="cover-slides">
+        <ul class="slides-container">
+            <li class="text-center">
+                <img src="images/welcomePage/img1.jpg" alt="">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1 class="m-b-20"><strong>Welcome To <br> StarsMoon</strong></h1>
+                            <p class="m-b-40">The Hottiest Global Fashion Women Brands Are Here!</p>
+                            <p>
+                                <a class="btn hvr-hover" href="#">    SignUp    </a> 
+                          
+                               <span style="margin-left:30px; margin-right:30px;">
+                                 <b>Have An Account!</b> 
+                               </span>
+                           
+                               <a class="btn hvr-hover" href="#">    Login     </a>
+                            </p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="text-center">
+                <img src="images/welcomePage/img3.jpg" alt="">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1 class="m-b-20"><strong>Welcome To <br> StarsMoon</strong></h1>
+                            <p class="m-b-40">The Hottiest Global Fashion Women Brands Are Here!</p>
+                            <p>
+                                <a class="btn hvr-hover" href="#">    SignUp    </a> 
+                          
+                               <span style="margin-left:30px; margin-right:30px;"> <b>Have An Account!</b> </span>
+                           
+                               <a class="btn hvr-hover" href="#">    Login     </a>
+                            </p>
+                            </div>
+                    </div>
+                </div>
+            </li>
+            <li class="text-center">
+                <img src="images/welcomePage/img2.jpg" alt="">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1 class="m-b-20"><strong>Welcome To <br> StarsMoon</strong></h1>
+                            <p class="m-b-40">The Hottiest Global Fashion Women Brands Are Here!</p>
+                           <p>
+                                <a class="btn hvr-hover" href="#">    SignUp    </a> 
+                          
+                               <span style="margin-left:30px; margin-right:30px;"> <b>Have An Account!</b> </span>
+                           
+                               <a class="btn hvr-hover" href="#">    Login     </a>
+                            </p> </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div class="slides-navigation">
+            <a href="#" class="next"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+            <a href="#" class="prev"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+        </div>
+    </section>
+    <!-- End Slider -->
+
+       <!-- Start Products  -->
+    <div class="products-box">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="title-all text-center">
+                        <h1>Featrued Products</h1>
+                        <p>Some of our special products </p>
+                    </div>
+                </div>
+            </div> 
+           
+       
+            <div class="featured-carousel owl-carousel " style="margin:20px;">
+            @foreach(var item in Model)
+            {
+                <div class="item">
+                    <div class="special-grid top-featured">
+                        <div class="products-single fix">
+                            <div class="box-img-hover">
+                                <div class="type-lb">
+                                    <p class="new">New</p>
+                                </div>
+                                <img src= @item.Image class="img-fluid" alt="Image">
+                                <div class="mask-icon">
+                                    <ul>
+                                        <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
+                                        <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
+                                        <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                    </ul>
+                                    <a class="cart" href="#">Add to Cart</a>
+                                </div>
+                            </div>
+                            <div class="why-text">
+                                <h4>@item.Name</h4>
+                                <h5> $@item.Price</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            }
+           
+
+            </div>
+        </div>
+    </div>
+    <!-- End Products  -->
+
+    <!-- ALL JS FILES -->
+    <script src="~/js/Home/jquery-3.2.1.min.js"></script>
+    <script src="~/js/Home/popper.min.js"></script>
+
+    <!-- ALL PLUGINS -->
+    <script src="~/js/Home/jquery.superslides.min.js"></script>
+    <script src="~/js/Home/bootstrap-select.js"></script>
+    <script src="~/js/Home/inewsticker.js"></script>
+    <script src="~/js/Home/bootsnav.js."></script>
+    <script src="~/js/Home/images-loded.min.js"></script>
+    <script src="~/js/Home/isotope.min.js"></script>
+    <script src="~/js/Home/owl.carousel.min.js"></script>
+    <script src="~/js/Home/main.js"></script>
+    <script src="~/js/Home/baguetteBox.min.js"></script>
+    <script src="~/js/Home/form-validator.min.js"></script>
+    <script src="~/js/Home/contact-form-script.js"></script>
+    <script src="~/js/Home/custom.js"></script>
+    

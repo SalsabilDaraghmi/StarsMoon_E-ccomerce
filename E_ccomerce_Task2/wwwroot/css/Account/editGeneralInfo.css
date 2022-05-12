@@ -1,0 +1,18 @@
+﻿
+.text-info {
+    color: #b0b435;
+}
+
+.hvr-hover {
+    margin-right: 20px;
+    width:100px
+}
+
+.form-control {
+    margin-bottom: 10px;
+    border: 2px solid #b0b435
+}
+
+.danger{
+    background-color:red;
+}

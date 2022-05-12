@@ -1,0 +1,121 @@
+﻿@model E_ccomerce_Task2.Models.AddressInfo
+
+@{
+    ViewData["Title"] = "Edit Address Information";
+    
+     <!-- Site CSS -->
+     <link rel="stylesheet" href="~/css/Home/style.css">
+        <link rel="stylesheet" href="~/css/Home/owl.carousel.min.css">
+       <link rel="stylesheet" href="~/css/Home/owl.theme.default.min.css">
+    <link rel="stylesheet" href="~/css/Account/editGeneralInfo.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="~/css/Home/responsive.css">
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]--> 
+   
+ }
+
+<section class="form-v10" style="padding: 30px 0px;">
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="title-all text-center">
+                    <h1>Profile Setting</h1>
+                </div>
+            </div>
+        </div> 
+         
+        <div class="row">
+            <div id="login-row" class="row justify-content-center align-items-center">
+                <div id="login-column" class="col-md-6">
+                    <div id="login-box" class="col-md-12">
+                        <form id="profile-form" class="form" action="" method="post">
+                           	<div asp-validation-summary="All" class="text-danger"></div>
+                            	<div class="form-row">
+						<div class="form-floating ">
+								<input asp-for="Address1" type="text" class="form-control" id="address1" placeholder="   " name="Address1">
+								<label asp-for="Address1">Address Line1</label>  
+								<span asp-validation-for="Address1" class="text-danger"></span>  
+						  </div>
+					</div>
+
+					<div class="form-row">
+						<div class="form-floating ">
+								<input asp-for="Address2" type="text" class="form-control" id="address2" placeholder="   " name="Address2">
+								<label asp-for="Address2">Address Line2</label>  
+								<span asp-validation-for="Address2" class="text-danger"></span>  
+						  </div>
+					</div>
+
+					
+					
+					<div class="form-group">
+						<div class="form-row form-row-1">
+							<div class="form-floating ">
+								<input asp-for="ZipCode" type="text" class="form-control" id="zipCode" placeholder="   " name="ZipCode">
+								<label asp-for="ZipCode">ZipCode</label>  
+								<span asp-validation-for="ZipCode" class="text-danger"></span>  
+						  </div>
+						</div>
+						<div class="form-row form-row-2">
+							<div class="form-floating ">
+								<input asp-for="City" type="text" class="form-control" id="city" placeholder="   " name="City">
+								<label asp-for="City">ZipCode</label>  
+								<span asp-validation-for="City" class="text-danger"></span>  
+						  </div>
+						</div>
+					</div>
+					<div class="form-row form-row-2">
+						<div class="form-floating ">
+							<select asp-for="Country" name="Country" class="form-control">
+								<option value="choose country">Country</option>
+								<option value="Palestine">Vietnam</option>
+								<option value="Vietnam">Vietnam</option>
+								<option value="Malaysia">Malaysia</option>
+								<option value="India">India</option>
+							</select>
+							<span class="select-btn">
+						  		<i class="zmdi zmdi-chevron-down"></i>
+							</span>
+							<label asp-for="Country">Country</label>  
+							<span asp-validation-for="Country" class="text-danger"></span>  
+					  </div>
+						
+					</div>
+                             
+                            <div class="">   
+                                
+                                <input type="submit" class="btn hvr-hover" name="Save" value="Save">
+                                <a asp-action="myAccount" asp-controller="Account" class="btn hvr-hover danger" >Cancel</a>
+                            </div>
+                          
+                           
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>   
+</section>
+   <!-- ALL JS FILES -->
+    <script src="~/js/Home/jquery-3.2.1.min.js"></script>
+    <script src="~/js/Home/popper.min.js"></script>
+
+    <!-- ALL PLUGINS -->
+    <script src="~/js/Home/jquery.superslides.min.js"></script>
+    <script src="~/js/Home/bootstrap-select.js"></script>
+    <script src="~/js/Home/inewsticker.js"></script>
+    <script src="~/js/Home/bootsnav.js."></script>
+    <script src="~/js/Home/images-loded.min.js"></script>
+    <script src="~/js/Home/isotope.min.js"></script>
+    <script src="~/js/Home/owl.carousel.min.js"></script>
+    <script src="~/js/Home/main.js"></script>
+    <script src="~/js/Home/baguetteBox.min.js"></script>
+    <script src="~/js/Home/form-validator.min.js"></script>
+    <script src="~/js/Home/contact-form-script.js"></script>
+    <script src="~/js/Home/custom.js"></script>
+
+

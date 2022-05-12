@@ -1,0 +1,107 @@
+﻿@model E_ccomerce_Task2.Models.LoginViewModel
+
+@{
+    ViewData["Title"] = "Sign Up";
+    
+     <!-- Site CSS -->
+     <link rel="stylesheet" href="~/css/Home/style.css">
+        <link rel="stylesheet" href="~/css/Home/owl.carousel.min.css">
+       <link rel="stylesheet" href="~/css/Home/owl.theme.default.min.css">
+  
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="~/css/Home/responsive.css">
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]--> 
+    ViewData["Title"] = "LogIn";
+ }
+ <style>
+    .text-info
+    {
+         color: #b0b435;
+    }
+    .hvr-hover{
+        display:block;
+        position: absolute;
+        left: 50%;
+        transform: translatex(-50%);
+        width: 200px;
+        margin-bottom:30px;
+    }
+    .form-control{
+        margin-bottom:10px;
+        border:2px solid #b0b435
+    }
+ </style>
+<section class="form-v10" style="padding: 30px 0px;">
+   
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="title-all text-center">
+                    <h1>LogIn</h1>
+                </div>
+            </div>
+        </div> 
+         
+        <div class="row">
+            <div id="login-row" class="row justify-content-center align-items-center">
+                <div id="login-column" class="col-md-6">
+                    <div id="login-box" class="col-md-12">
+                        <form id="login-form" class="form" action="" method="post">
+                           	<div asp-validation-summary="All" class="text-danger"></div>
+
+                            <div class="form-floating ">
+								<input asp-for="Email" type="text" class="form-control" id="email" placeholder="   " name="Email">
+								<label asp-for="Email" class="text-info"> Email </label>  
+								<span asp-validation-for="Email" class="text-danger"></span>  
+						    </div>
+                            <div class="form-floating ">
+								<input asp-for="Password" type="password" class="form-control" id="password" placeholder="   " name="Password">
+								<label asp-for="Password" class="text-info"> Password</label>  
+								<span asp-validation-for="Password" class="text-danger"></span>  
+						    </div>
+                            <div class="form-group">
+                                <label asp-for="RememberMe" class="text-info">
+                                    <span>Remember me</span> <span>
+                                    <input asp-for="RememberMe" style="display:inline" id="remember-me" name="RememberMe" type="checkbox"></span></label>
+                           
+                                        <a style="float: right!important" asp-action="ForgotPassword" asp-controller="Account" class="text-info">Forgot Password?</a>
+                                   
+                                    <br>
+
+                                    <input type="submit" class="btn hvr-hover" name="LogIn" value="LogIn">
+                            </div>
+                            <br />  
+                            <br />
+                            <p id="register-link" class="text-right">
+                                <a asp-action="Register" asp-controller="Account" class="text-info">Don't have an account?Register here</a>
+                            </p>
+                           
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>   
+</section>
+   <!-- ALL JS FILES -->
+    <script src="~/js/Home/jquery-3.2.1.min.js"></script>
+    <script src="~/js/Home/popper.min.js"></script>
+
+    <!-- ALL PLUGINS -->
+    <script src="~/js/Home/jquery.superslides.min.js"></script>
+    <script src="~/js/Home/bootstrap-select.js"></script>
+    <script src="~/js/Home/inewsticker.js"></script>
+    <script src="~/js/Home/bootsnav.js."></script>
+    <script src="~/js/Home/images-loded.min.js"></script>
+    <script src="~/js/Home/isotope.min.js"></script>
+    <script src="~/js/Home/owl.carousel.min.js"></script>
+    <script src="~/js/Home/main.js"></script>
+    <script src="~/js/Home/baguetteBox.min.js"></script>
+    <script src="~/js/Home/form-validator.min.js"></script>
+    <script src="~/js/Home/contact-form-script.js"></script>
+    <script src="~/js/Home/custom.js"></script>
+
+
